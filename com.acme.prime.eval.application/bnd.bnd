@@ -1,0 +1,23 @@
+#
+#  APPLICATION
+#
+
+Bundle-Version: 1.0.0.${tstamp}
+Bundle-Description: \
+	This is the  bundle. It carries the configuration for an application \
+	and provides some basic very much application specific stuff.  \
+	\
+	${warning;Please update this Bundle-Description in com.acme.prime.eval.application/bnd.bnd}
+
+Private-Package:  \
+	com.acme.prime.eval.application
+	
+-includeresource: \
+	{readme.md}, \
+	{configuration=configuration}, \
+	{static=static}
+
+-buildpath:  \
+	osgi.enroute.base.api,\
+	com.acme.prime.eval.api;version=latest
+	
